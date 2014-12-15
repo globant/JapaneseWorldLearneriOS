@@ -11,6 +11,10 @@
 
 @interface AppDelegate ()
 
+@property (nonatomic, strong) UIImageView* splashView;
+
+- (void)startupAnimationDone:(NSString *)animationID finished:(NSNumber *)finished context:(void *)context;
+
 @end
 
 @implementation AppDelegate
@@ -23,7 +27,25 @@
 	[self.window setRootViewController:navControllerHome];
 	self.window.backgroundColor = [UIColor whiteColor];
 	[self.window makeKeyAndVisible];
+    
+    self.splashView = [[UIImageView alloc] initWithFrame:CGRectMake(0,0, 320, 480)];
+    self.splashView.image = [UIImage imageNamed:@"640x1136"];
+    [self.window addSubview:self.splashView];
+    [self.window bringSubviewToFront:self.splashView];
+    [UIView beginAnimations:nil context:nil];
+    [UIView setAnimationDuration:1];
+    [UIView setAnimationTransition:UIViewAnimationTransitionNone forView:self.window cache:YES];
+    [UIView setAnimationDelegate:self];
+    [UIView setAnimationDidStopSelector:@selector(startupAnimationDone:finished:context:)];
+    self.splashView.alpha = 0.0;
+    self.splashView.frame = CGRectMake(-60, -60, 440, 600);
+    [UIView commitAnimations];
+    
 	return YES;
+}
+
+- (void)startupAnimationDone:(NSString *)animationID finished:(NSNumber *)finished context:(void *)context {
+    [self.splashView removeFromSuperview];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
