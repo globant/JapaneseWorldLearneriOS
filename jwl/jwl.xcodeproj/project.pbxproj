@@ -11,8 +11,19 @@
 		E8E3A6231A3F16BA00CE3678 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E8E3A6221A3F16BA00CE3678 /* AppDelegate.m */; };
 		E8E3A6291A3F16BB00CE3678 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8E3A6281A3F16BB00CE3678 /* ViewController.m */; };
 		E8E3A62E1A3F16BB00CE3678 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8E3A62D1A3F16BB00CE3678 /* Images.xcassets */; };
-		E8E3A63D1A3F16BC00CE3678 /* jwlTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E8E3A63C1A3F16BC00CE3678 /* jwlTests.m */; };
 		E8E3A6471A3F29BF00CE3678 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E8E3A6461A3F29BF00CE3678 /* Default-568h@2x.png */; };
+		E8E3A6581A3F30CC00CE3678 /* Singleton.m in Sources */ = {isa = PBXBuildFile; fileRef = E8E3A6561A3F30CC00CE3678 /* Singleton.m */; };
+		E8E3A65F1A3F313500CE3678 /* BaseEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = E8E3A65E1A3F313500CE3678 /* BaseEntity.m */; };
+		E8FA3B361A3F321200F5BE5B /* Book.m in Sources */ = {isa = PBXBuildFile; fileRef = E8FA3B351A3F321200F5BE5B /* Book.m */; };
+		E8FA3B391A3F326800F5BE5B /* Unit.m in Sources */ = {isa = PBXBuildFile; fileRef = E8FA3B381A3F326800F5BE5B /* Unit.m */; };
+		E8FA3B3C1A3F338100F5BE5B /* Word.m in Sources */ = {isa = PBXBuildFile; fileRef = E8FA3B3B1A3F338100F5BE5B /* Word.m */; };
+		E8FA3B3F1A3F348F00F5BE5B /* dataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E8FA3B3D1A3F348F00F5BE5B /* dataModel.xcdatamodeld */; };
+		E8FA3B491A3F53BC00F5BE5B /* BookRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = E8FA3B481A3F53BC00F5BE5B /* BookRepository.m */; };
+		E8FA3B4C1A3F566C00F5BE5B /* UnitRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = E8FA3B4B1A3F566C00F5BE5B /* UnitRepository.m */; };
+		E8FA3B4F1A3F57FA00F5BE5B /* WordRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = E8FA3B4E1A3F57FA00F5BE5B /* WordRepository.m */; };
+		E8FA3B531A3F5A0500F5BE5B /* CoreDataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E8FA3B521A3F5A0500F5BE5B /* CoreDataHelper.m */; };
+		E8FA3B561A3F5D3800F5BE5B /* Saver.m in Sources */ = {isa = PBXBuildFile; fileRef = E8FA3B551A3F5D3800F5BE5B /* Saver.m */; };
+		E8FA3B581A3F5F9A00F5BE5B /* SaverTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E8FA3B571A3F5F9A00F5BE5B /* SaverTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,8 +47,29 @@
 		E8E3A62D1A3F16BB00CE3678 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		E8E3A6361A3F16BC00CE3678 /* jwlTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = jwlTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8E3A63B1A3F16BC00CE3678 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E8E3A63C1A3F16BC00CE3678 /* jwlTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = jwlTests.m; sourceTree = "<group>"; };
 		E8E3A6461A3F29BF00CE3678 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		E8E3A6551A3F30CC00CE3678 /* Singleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Singleton.h; sourceTree = "<group>"; };
+		E8E3A6561A3F30CC00CE3678 /* Singleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Singleton.m; sourceTree = "<group>"; };
+		E8E3A65D1A3F313500CE3678 /* BaseEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseEntity.h; sourceTree = "<group>"; };
+		E8E3A65E1A3F313500CE3678 /* BaseEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseEntity.m; sourceTree = "<group>"; };
+		E8FA3B341A3F321200F5BE5B /* Book.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Book.h; sourceTree = "<group>"; };
+		E8FA3B351A3F321200F5BE5B /* Book.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Book.m; sourceTree = "<group>"; };
+		E8FA3B371A3F326800F5BE5B /* Unit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Unit.h; sourceTree = "<group>"; };
+		E8FA3B381A3F326800F5BE5B /* Unit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Unit.m; sourceTree = "<group>"; };
+		E8FA3B3A1A3F338000F5BE5B /* Word.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Word.h; sourceTree = "<group>"; };
+		E8FA3B3B1A3F338100F5BE5B /* Word.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Word.m; sourceTree = "<group>"; };
+		E8FA3B3E1A3F348F00F5BE5B /* dataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = dataModel.xcdatamodel; sourceTree = "<group>"; };
+		E8FA3B471A3F53BC00F5BE5B /* BookRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookRepository.h; sourceTree = "<group>"; };
+		E8FA3B481A3F53BC00F5BE5B /* BookRepository.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookRepository.m; sourceTree = "<group>"; };
+		E8FA3B4A1A3F566C00F5BE5B /* UnitRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnitRepository.h; sourceTree = "<group>"; };
+		E8FA3B4B1A3F566C00F5BE5B /* UnitRepository.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UnitRepository.m; sourceTree = "<group>"; };
+		E8FA3B4D1A3F57FA00F5BE5B /* WordRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordRepository.h; sourceTree = "<group>"; };
+		E8FA3B4E1A3F57FA00F5BE5B /* WordRepository.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordRepository.m; sourceTree = "<group>"; };
+		E8FA3B511A3F5A0500F5BE5B /* CoreDataHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataHelper.h; sourceTree = "<group>"; };
+		E8FA3B521A3F5A0500F5BE5B /* CoreDataHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataHelper.m; sourceTree = "<group>"; };
+		E8FA3B541A3F5D3800F5BE5B /* Saver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Saver.h; sourceTree = "<group>"; };
+		E8FA3B551A3F5D3800F5BE5B /* Saver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Saver.m; sourceTree = "<group>"; };
+		E8FA3B571A3F5F9A00F5BE5B /* SaverTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SaverTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +112,9 @@
 		E8E3A61C1A3F16BA00CE3678 /* jwl */ = {
 			isa = PBXGroup;
 			children = (
+				E8E3A65A1A3F30DB00CE3678 /* UI */,
+				E8E3A6591A3F30D500CE3678 /* DataAccess */,
+				E8E3A6501A3F30CC00CE3678 /* BusinessLogic */,
 				E8E3A6211A3F16BA00CE3678 /* AppDelegate.h */,
 				E8E3A6221A3F16BA00CE3678 /* AppDelegate.m */,
 				E8E3A6271A3F16BB00CE3678 /* ViewController.h */,
@@ -102,8 +137,8 @@
 		E8E3A6391A3F16BC00CE3678 /* jwlTests */ = {
 			isa = PBXGroup;
 			children = (
-				E8E3A63C1A3F16BC00CE3678 /* jwlTests.m */,
 				E8E3A63A1A3F16BC00CE3678 /* Supporting Files */,
+				E8FA3B571A3F5F9A00F5BE5B /* SaverTests.m */,
 			);
 			path = jwlTests;
 			sourceTree = "<group>";
@@ -114,6 +149,96 @@
 				E8E3A63B1A3F16BC00CE3678 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E8E3A6501A3F30CC00CE3678 /* BusinessLogic */ = {
+			isa = PBXGroup;
+			children = (
+				E8E3A6511A3F30CC00CE3678 /* Helpers */,
+				E8E3A6541A3F30CC00CE3678 /* Patterns */,
+				E8FA3B541A3F5D3800F5BE5B /* Saver.h */,
+				E8FA3B551A3F5D3800F5BE5B /* Saver.m */,
+			);
+			path = BusinessLogic;
+			sourceTree = "<group>";
+		};
+		E8E3A6511A3F30CC00CE3678 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		E8E3A6541A3F30CC00CE3678 /* Patterns */ = {
+			isa = PBXGroup;
+			children = (
+				E8E3A6551A3F30CC00CE3678 /* Singleton.h */,
+				E8E3A6561A3F30CC00CE3678 /* Singleton.m */,
+			);
+			path = Patterns;
+			sourceTree = "<group>";
+		};
+		E8E3A6591A3F30D500CE3678 /* DataAccess */ = {
+			isa = PBXGroup;
+			children = (
+				E8FA3B501A3F5A0500F5BE5B /* Helpers */,
+				E8FA3B401A3F3A1C00F5BE5B /* Repositories */,
+				E8E3A65B1A3F30F100CE3678 /* Entities */,
+				E8E3A65C1A3F30F100CE3678 /* Model */,
+			);
+			path = DataAccess;
+			sourceTree = "<group>";
+		};
+		E8E3A65A1A3F30DB00CE3678 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		E8E3A65B1A3F30F100CE3678 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				E8E3A65D1A3F313500CE3678 /* BaseEntity.h */,
+				E8E3A65E1A3F313500CE3678 /* BaseEntity.m */,
+				E8FA3B341A3F321200F5BE5B /* Book.h */,
+				E8FA3B351A3F321200F5BE5B /* Book.m */,
+				E8FA3B371A3F326800F5BE5B /* Unit.h */,
+				E8FA3B381A3F326800F5BE5B /* Unit.m */,
+				E8FA3B3A1A3F338000F5BE5B /* Word.h */,
+				E8FA3B3B1A3F338100F5BE5B /* Word.m */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		E8E3A65C1A3F30F100CE3678 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E8FA3B3D1A3F348F00F5BE5B /* dataModel.xcdatamodeld */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E8FA3B401A3F3A1C00F5BE5B /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				E8FA3B471A3F53BC00F5BE5B /* BookRepository.h */,
+				E8FA3B481A3F53BC00F5BE5B /* BookRepository.m */,
+				E8FA3B4A1A3F566C00F5BE5B /* UnitRepository.h */,
+				E8FA3B4B1A3F566C00F5BE5B /* UnitRepository.m */,
+				E8FA3B4D1A3F57FA00F5BE5B /* WordRepository.h */,
+				E8FA3B4E1A3F57FA00F5BE5B /* WordRepository.m */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		E8FA3B501A3F5A0500F5BE5B /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				E8FA3B511A3F5A0500F5BE5B /* CoreDataHelper.h */,
+				E8FA3B521A3F5A0500F5BE5B /* CoreDataHelper.m */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -216,8 +341,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				E8E3A6231A3F16BA00CE3678 /* AppDelegate.m in Sources */,
+				E8FA3B391A3F326800F5BE5B /* Unit.m in Sources */,
+				E8E3A65F1A3F313500CE3678 /* BaseEntity.m in Sources */,
 				E8E3A6291A3F16BB00CE3678 /* ViewController.m in Sources */,
+				E8FA3B3F1A3F348F00F5BE5B /* dataModel.xcdatamodeld in Sources */,
 				E8E3A6201A3F16BA00CE3678 /* main.m in Sources */,
+				E8FA3B4C1A3F566C00F5BE5B /* UnitRepository.m in Sources */,
+				E8FA3B4F1A3F57FA00F5BE5B /* WordRepository.m in Sources */,
+				E8FA3B361A3F321200F5BE5B /* Book.m in Sources */,
+				E8E3A6581A3F30CC00CE3678 /* Singleton.m in Sources */,
+				E8FA3B531A3F5A0500F5BE5B /* CoreDataHelper.m in Sources */,
+				E8FA3B491A3F53BC00F5BE5B /* BookRepository.m in Sources */,
+				E8FA3B3C1A3F338100F5BE5B /* Word.m in Sources */,
+				E8FA3B561A3F5D3800F5BE5B /* Saver.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -225,7 +361,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E8E3A63D1A3F16BC00CE3678 /* jwlTests.m in Sources */,
+				E8FA3B581A3F5F9A00F5BE5B /* SaverTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -389,6 +525,7 @@
 				E8E3A6421A3F16BC00CE3678 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E8E3A6431A3F16BC00CE3678 /* Build configuration list for PBXNativeTarget "jwlTests" */ = {
 			isa = XCConfigurationList;
@@ -397,8 +534,22 @@
 				E8E3A6451A3F16BC00CE3678 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		E8FA3B3D1A3F348F00F5BE5B /* dataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				E8FA3B3E1A3F348F00F5BE5B /* dataModel.xcdatamodel */,
+			);
+			currentVersion = E8FA3B3E1A3F348F00F5BE5B /* dataModel.xcdatamodel */;
+			path = dataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = E8E3A6121A3F16BA00CE3678 /* Project object */;
 }

@@ -1,6 +1,6 @@
 //
-//  jwlTests.m
-//  jwlTests
+//  SaverTests.m
+//  jwl
 //
 //  Created by Gabriel Verdi on 12/15/14.
 //  Copyright (c) 2014 Gabriel Verdi. All rights reserved.
@@ -8,12 +8,13 @@
 
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
+#import "Saver.h"
 
-@interface jwlTests : XCTestCase
+@interface SaverTests : XCTestCase
 
 @end
 
-@implementation jwlTests
+@implementation SaverTests
 
 - (void)setUp {
     [super setUp];
@@ -25,16 +26,13 @@
     [super tearDown];
 }
 
-- (void)testExample {
-    // This is an example of a functional test case.
-    XCTAssert(YES, @"Pass");
+-(void)testSaveBook {
+	Saver* saver = [[Saver alloc]init];
+	Book* book = [[Book alloc]init];
+	[book setName:@"Test Book"];
+	BOOL result = [saver saveBook:book];
+	XCTAssertTrue(result);
 }
 
-- (void)testPerformanceExample {
-    // This is an example of a performance test case.
-    [self measureBlock:^{
-        // Put the code you want to measure the time of here.
-    }];
-}
 
 @end
