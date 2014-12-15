@@ -24,6 +24,9 @@
 		E8FA3B531A3F5A0500F5BE5B /* CoreDataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E8FA3B521A3F5A0500F5BE5B /* CoreDataHelper.m */; };
 		E8FA3B561A3F5D3800F5BE5B /* Saver.m in Sources */ = {isa = PBXBuildFile; fileRef = E8FA3B551A3F5D3800F5BE5B /* Saver.m */; };
 		E8FA3B581A3F5F9A00F5BE5B /* SaverTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E8FA3B571A3F5F9A00F5BE5B /* SaverTests.m */; };
+		E8FA3B5D1A3F65F900F5BE5B /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8FA3B5B1A3F65F900F5BE5B /* MainViewController.m */; };
+		E8FA3B5E1A3F65F900F5BE5B /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E8FA3B5C1A3F65F900F5BE5B /* MainViewController.xib */; };
+		E8FA3B611A3F7C4500F5BE5B /* Searcher.m in Sources */ = {isa = PBXBuildFile; fileRef = E8FA3B601A3F7C4500F5BE5B /* Searcher.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +73,11 @@
 		E8FA3B541A3F5D3800F5BE5B /* Saver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Saver.h; sourceTree = "<group>"; };
 		E8FA3B551A3F5D3800F5BE5B /* Saver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Saver.m; sourceTree = "<group>"; };
 		E8FA3B571A3F5F9A00F5BE5B /* SaverTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SaverTests.m; sourceTree = "<group>"; };
+		E8FA3B5A1A3F65F900F5BE5B /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		E8FA3B5B1A3F65F900F5BE5B /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		E8FA3B5C1A3F65F900F5BE5B /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		E8FA3B5F1A3F7C4500F5BE5B /* Searcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Searcher.h; sourceTree = "<group>"; };
+		E8FA3B601A3F7C4500F5BE5B /* Searcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Searcher.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +166,8 @@
 				E8E3A6541A3F30CC00CE3678 /* Patterns */,
 				E8FA3B541A3F5D3800F5BE5B /* Saver.h */,
 				E8FA3B551A3F5D3800F5BE5B /* Saver.m */,
+				E8FA3B5F1A3F7C4500F5BE5B /* Searcher.h */,
+				E8FA3B601A3F7C4500F5BE5B /* Searcher.m */,
 			);
 			path = BusinessLogic;
 			sourceTree = "<group>";
@@ -192,6 +202,7 @@
 		E8E3A65A1A3F30DB00CE3678 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				E8FA3B591A3F65E500F5BE5B /* MainView */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -239,6 +250,16 @@
 				E8FA3B521A3F5A0500F5BE5B /* CoreDataHelper.m */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		E8FA3B591A3F65E500F5BE5B /* MainView */ = {
+			isa = PBXGroup;
+			children = (
+				E8FA3B5A1A3F65F900F5BE5B /* MainViewController.h */,
+				E8FA3B5B1A3F65F900F5BE5B /* MainViewController.m */,
+				E8FA3B5C1A3F65F900F5BE5B /* MainViewController.xib */,
+			);
+			path = MainView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -322,6 +343,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E8E3A62E1A3F16BB00CE3678 /* Images.xcassets in Resources */,
+				E8FA3B5E1A3F65F900F5BE5B /* MainViewController.xib in Resources */,
 				E8E3A6471A3F29BF00CE3678 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -342,6 +364,7 @@
 			files = (
 				E8E3A6231A3F16BA00CE3678 /* AppDelegate.m in Sources */,
 				E8FA3B391A3F326800F5BE5B /* Unit.m in Sources */,
+				E8FA3B611A3F7C4500F5BE5B /* Searcher.m in Sources */,
 				E8E3A65F1A3F313500CE3678 /* BaseEntity.m in Sources */,
 				E8E3A6291A3F16BB00CE3678 /* ViewController.m in Sources */,
 				E8FA3B3F1A3F348F00F5BE5B /* dataModel.xcdatamodeld in Sources */,
@@ -353,6 +376,7 @@
 				E8FA3B531A3F5A0500F5BE5B /* CoreDataHelper.m in Sources */,
 				E8FA3B491A3F53BC00F5BE5B /* BookRepository.m in Sources */,
 				E8FA3B3C1A3F338100F5BE5B /* Word.m in Sources */,
+				E8FA3B5D1A3F65F900F5BE5B /* MainViewController.m in Sources */,
 				E8FA3B561A3F5D3800F5BE5B /* Saver.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

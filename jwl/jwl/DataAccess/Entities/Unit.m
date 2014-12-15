@@ -9,5 +9,6 @@
 #import "Unit.h"
 
 @implementation Unit
-
+@synthesize name;
+@synthesize book;
 @end

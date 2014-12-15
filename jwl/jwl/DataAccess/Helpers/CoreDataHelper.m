@@ -7,7 +7,7 @@
 //
 
 #import "CoreDataHelper.h"
-#define modelName @"DER"
+#define modelName @"dataModel"
 
 @implementation CoreDataHelper
 
@@ -54,7 +54,7 @@
 		return _persistentStoreCoordinator;
 	}
 	
-	NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"DER.sqlite"];
+	NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"dataModel.sqlite"];
 	
 	NSError *error = nil;
 	_persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self managedObjectModel]];

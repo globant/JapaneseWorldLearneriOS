@@ -9,5 +9,7 @@
 #import "Word.h"
 
 @implementation Word
-
+@synthesize japanese;
+@synthesize translation;
+@synthesize unit;
 @end

@@ -1,14 +1,13 @@
 //
-//  Book.m
+//  MainViewController.h
 //  jwl
 //
 //  Created by Gabriel Verdi on 12/15/14.
 //  Copyright (c) 2014 Gabriel Verdi. All rights reserved.
 //
 
-#import "Book.h"
+#import <UIKit/UIKit.h>
 
-@implementation Book
+@interface MainViewController : UIViewController
 
-@synthesize name;
 @end

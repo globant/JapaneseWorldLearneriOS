@@ -13,5 +13,6 @@
  */
 @implementation BaseEntity
 
+@synthesize identifier;
 
 @end
