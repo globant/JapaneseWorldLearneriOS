@@ -13,5 +13,5 @@
 
 +(BOOL)saveWord:(Word*)word;
 +(BOOL)removeWord:(Word*)word;
-
++(Word*)searchWordWithId:(NSNumber*)identifier;
 @end

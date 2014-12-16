@@ -8,7 +8,11 @@
 
 #import <Foundation/Foundation.h>
 #import "Book.h"
+#import "Unit.h"
+#import "Word.h"
 
 @interface Searcher : NSObject
 -(Book*)searchBookByIdentifier:(NSNumber*)identifier;
+-(Unit*)searchUnitByIdentifier:(NSNumber*)identifier;
+-(Word*)searchWordByIdentifier:(NSNumber*)identifier;
 @end

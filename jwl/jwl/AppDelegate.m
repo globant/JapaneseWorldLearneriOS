@@ -28,7 +28,7 @@
 	self.window.backgroundColor = [UIColor whiteColor];
 	[self.window makeKeyAndVisible];
     
-    self.splashView = [[UIImageView alloc] initWithFrame:CGRectMake(0,0, 320, 480)];
+    self.splashView = [[UIImageView alloc] initWithFrame:CGRectMake(0,0, 320, 568)];
     self.splashView.image = [UIImage imageNamed:@"640x1136"];
     [self.window addSubview:self.splashView];
     [self.window bringSubviewToFront:self.splashView];
@@ -38,14 +38,14 @@
     [UIView setAnimationDelegate:self];
     [UIView setAnimationDidStopSelector:@selector(startupAnimationDone:finished:context:)];
     self.splashView.alpha = 0.0;
-    self.splashView.frame = CGRectMake(-60, -60, 440, 600);
+    self.splashView.frame = CGRectMake(-60, -60, 320, 568);
     [UIView commitAnimations];
     
 	return YES;
 }
 
 - (void)startupAnimationDone:(NSString *)animationID finished:(NSNumber *)finished context:(void *)context {
-    [self.splashView removeFromSuperview];
+    [self.splashView removeFromSuperview];    
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

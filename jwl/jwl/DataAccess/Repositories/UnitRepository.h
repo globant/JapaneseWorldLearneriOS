@@ -13,5 +13,5 @@
 
 +(BOOL)saveUnit:(Unit*)unit;
 +(BOOL)removeUnit:(Unit*)unit;
-
++(Unit*)searchUnitWithId:(NSNumber*)identifier;
 @end

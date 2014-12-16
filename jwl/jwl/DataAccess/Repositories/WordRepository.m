@@ -38,6 +38,33 @@
 		return FALSE;
 	}
 	return TRUE;
-
 }
+
++(Word*)searchWordWithId:(NSNumber*)identifier {
+    NSManagedObjectContext *context = [[CoreDataHelper sharedInstance] managedObjectContext];
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription
+                                   entityForName:wordClass
+                                   inManagedObjectContext:context];
+    
+    [fetchRequest setEntity:entity];
+    [fetchRequest setReturnsObjectsAsFaults:NO];
+    NSPredicate* identifierPredicate = [NSPredicate predicateWithFormat:@"identifier = %@",[identifier intValue]];
+    [fetchRequest setPredicate:identifierPredicate];
+    NSError *error;
+    NSArray *fetchedObjects = [context executeFetchRequest:fetchRequest error:&error];
+    if(error) {
+        NSLog([NSString stringWithFormat:@"Error recovering %@",[error localizedDescription]], nil);
+        return nil;
+    }
+    else {
+        if(fetchedObjects.count > 0) {
+            return [fetchedObjects objectAtIndex:0];
+        }
+        else {
+            return nil;
+        }
+    }
+}
+
 @end

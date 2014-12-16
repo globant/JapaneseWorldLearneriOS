@@ -8,11 +8,19 @@
 
 #import "Searcher.h"
 #import "BookRepository.h"
+#import "UnitRepository.h"
+#import "WordRepository.h"
 
 @implementation Searcher
 
 -(Book*)searchBookByIdentifier:(NSNumber *)identifier {
 	return [BookRepository searchBookWithId:identifier];
+}
+-(Unit*)searchUnitByIdentifier:(NSNumber*)identifier{
+    return [UnitRepository searchUnitWithId:identifier];
+}
+-(Word*)searchWordByIdentifier:(NSNumber*)identifier{
+    return [WordRepository searchWordWithId:identifier];
 }
 
 @end
