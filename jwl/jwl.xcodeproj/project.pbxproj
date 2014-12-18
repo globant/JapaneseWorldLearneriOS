@@ -29,6 +29,8 @@
 		E8FA3B611A3F7C4500F5BE5B /* Searcher.m in Sources */ = {isa = PBXBuildFile; fileRef = E8FA3B601A3F7C4500F5BE5B /* Searcher.m */; };
 		EA1B30221A42115E00425C9C /* LearnMainViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA1B30201A42115E00425C9C /* LearnMainViewViewController.m */; };
 		EA1B30231A42115E00425C9C /* LearnMainViewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA1B30211A42115E00425C9C /* LearnMainViewViewController.xib */; };
+		EA6747EB1A43145E00585EC8 /* LearnViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA6747E91A43145E00585EC8 /* LearnViewController.m */; };
+		EA6747EC1A43145E00585EC8 /* LearnViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA6747EA1A43145E00585EC8 /* LearnViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +85,9 @@
 		EA1B301F1A42115E00425C9C /* LearnMainViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LearnMainViewViewController.h; sourceTree = "<group>"; };
 		EA1B30201A42115E00425C9C /* LearnMainViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LearnMainViewViewController.m; sourceTree = "<group>"; };
 		EA1B30211A42115E00425C9C /* LearnMainViewViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LearnMainViewViewController.xib; sourceTree = "<group>"; };
+		EA6747E81A43145E00585EC8 /* LearnViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LearnViewController.h; sourceTree = "<group>"; };
+		EA6747E91A43145E00585EC8 /* LearnViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LearnViewController.m; sourceTree = "<group>"; };
+		EA6747EA1A43145E00585EC8 /* LearnViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LearnViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -207,6 +212,7 @@
 		E8E3A65A1A3F30DB00CE3678 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				EA6747E71A43144800585EC8 /* LearnView */,
 				EA1B301E1A42115E00425C9C /* LearnMainView */,
 				E8FA3B591A3F65E500F5BE5B /* MainView */,
 			);
@@ -276,6 +282,16 @@
 				EA1B30211A42115E00425C9C /* LearnMainViewViewController.xib */,
 			);
 			path = LearnMainView;
+			sourceTree = "<group>";
+		};
+		EA6747E71A43144800585EC8 /* LearnView */ = {
+			isa = PBXGroup;
+			children = (
+				EA6747E81A43145E00585EC8 /* LearnViewController.h */,
+				EA6747E91A43145E00585EC8 /* LearnViewController.m */,
+				EA6747EA1A43145E00585EC8 /* LearnViewController.xib */,
+			);
+			path = LearnView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -360,6 +376,7 @@
 			files = (
 				E8E3A62E1A3F16BB00CE3678 /* Images.xcassets in Resources */,
 				EA1B30231A42115E00425C9C /* LearnMainViewViewController.xib in Resources */,
+				EA6747EC1A43145E00585EC8 /* LearnViewController.xib in Resources */,
 				E8FA3B5E1A3F65F900F5BE5B /* MainViewController.xib in Resources */,
 				E8E3A6471A3F29BF00CE3678 /* Default-568h@2x.png in Resources */,
 			);
@@ -386,6 +403,7 @@
 				E8E3A6291A3F16BB00CE3678 /* ViewController.m in Sources */,
 				EA1B30221A42115E00425C9C /* LearnMainViewViewController.m in Sources */,
 				E8FA3B3F1A3F348F00F5BE5B /* dataModel.xcdatamodeld in Sources */,
+				EA6747EB1A43145E00585EC8 /* LearnViewController.m in Sources */,
 				E8E3A6201A3F16BA00CE3678 /* main.m in Sources */,
 				E8FA3B4C1A3F566C00F5BE5B /* UnitRepository.m in Sources */,
 				E8FA3B4F1A3F57FA00F5BE5B /* WordRepository.m in Sources */,

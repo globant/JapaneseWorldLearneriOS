@@ -7,9 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LearnViewController.h"
 
-@interface LearnMainViewViewController : UIViewController
+@interface LearnMainViewViewController : UIViewController <UIPickerViewDataSource, UIPickerViewDelegate>
 
-@property (strong, nonatomic) IBOutlet UIPickerView *bookPicker;
+@property (weak, nonatomic) IBOutlet UIPickerView *bookPicker;
+@property (strong, nonatomic) IBOutlet UIPickerView *unitFirstPicker;
+@property (strong, nonatomic) IBOutlet UIPickerView *unitSecondPicker;
+- (IBAction)nextButton:(UIButton *)sender;
+
+-(BOOL)verifySelectedUnits;
 
 @end

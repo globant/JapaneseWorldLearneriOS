@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LearnMainViewViewController.h"
 
 @interface MainViewController : UIViewController
+
+- (IBAction)learnButton:(UIButton *)sender;
 
 @end

@@ -25,4 +25,10 @@
 }
 
 
+- (IBAction)learnButton:(UIButton *)sender {
+    LearnMainViewViewController* nextView = [[LearnMainViewViewController alloc]init];
+    [self.navigationController pushViewController:nextView animated:YES];
+    
+}
+
 @end
