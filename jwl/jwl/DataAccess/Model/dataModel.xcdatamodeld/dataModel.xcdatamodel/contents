@@ -18,7 +18,7 @@
         <relationship name="unit" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Unit" inverseName="word" inverseEntity="Unit" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Book" positionX="-6120" positionY="-3670" width="128" height="88"/>
+        <element name="Book" positionX="-6120" positionY="-3670" width="128" height="90"/>
         <element name="Unit" positionX="-6120" positionY="-3528" width="128" height="103"/>
         <element name="Word" positionX="-6120" positionY="-3384" width="128" height="88"/>
     </elements>

@@ -49,7 +49,7 @@
     
     [fetchRequest setEntity:entity];
     [fetchRequest setReturnsObjectsAsFaults:NO];
-    NSPredicate* identifierPredicate = [NSPredicate predicateWithFormat:@"identifier = %@",[identifier intValue]];
+    NSPredicate* identifierPredicate = [NSPredicate predicateWithFormat:@"id == %d",[identifier intValue]];
     [fetchRequest setPredicate:identifierPredicate];
     NSError *error;
     NSArray *fetchedObjects = [context executeFetchRequest:fetchRequest error:&error];
