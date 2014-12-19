@@ -32,6 +32,20 @@
     
     self.unitSecondPicker.dataSource = self;
     self.unitSecondPicker.delegate = self;
+    
+    //Background color
+    NSArray *colors = @[(id)[UIColor whiteColor].CGColor,
+                        (id)[UIColor blackColor].CGColor];
+    CAGradientLayer *gradient = [CAGradientLayer layer];
+    gradient.colors = colors;
+    gradient.frame = self.view.bounds;
+    [self.view.layer insertSublayer:gradient atIndex:0];
+    
+    //Button color
+    self.peakButton.layer.borderColor = [UIColor blackColor].CGColor;
+    self.peakButton.layer.borderWidth = 1.0;
+    self.peakButton.layer.cornerRadius = 10;
+    self.peakButton.layer.backgroundColor = [UIColor colorWithWhite:0.9f alpha:0.9f].CGColor;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -73,7 +87,7 @@
     if([pickerView isEqual: _bookPicker]){
         return 100.0f;
     }else if([pickerView isEqual: _unitFirstPicker] || [pickerView isEqual: _unitSecondPicker]){
-        return 30.0f;
+        return 50.0f;
     }else{
         return 0.0f;
     }
@@ -99,13 +113,15 @@
     
     if([pickerView isEqual: _bookPicker]){
         retval.text = [_bookPickerData objectAtIndex:row];
-        retval.textAlignment = NSTextAlignmentCenter;
         retval.font = [UIFont systemFontOfSize:16];
     }else if([pickerView isEqual: _unitFirstPicker] || [pickerView isEqual: _unitSecondPicker]){
         retval.text = [_unitPickerData objectAtIndex:row];
-        retval.textAlignment = NSTextAlignmentCenter;
         retval.font = [UIFont systemFontOfSize:12];
     }
+    
+    retval.textAlignment = NSTextAlignmentCenter;
+    retval.backgroundColor = [UIColor colorWithWhite:0.9f alpha:0.9f];
+    
     return retval;
 }
 
@@ -140,6 +156,9 @@
         LearnViewController* nextView = [[LearnViewController alloc]initWithSelection:self.selection];
         [self.navigationController pushViewController:nextView animated:YES];
     }
+}
+
+- (IBAction)peakButton:(UIButton *)sender {
 }
 
 @end

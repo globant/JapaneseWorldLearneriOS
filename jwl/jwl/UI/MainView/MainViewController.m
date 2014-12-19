@@ -16,7 +16,25 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    
+    //Background color
+    NSArray *colors = @[(id)[UIColor whiteColor].CGColor,
+                        (id)[UIColor blackColor].CGColor];
+    CAGradientLayer *gradient = [CAGradientLayer layer];
+    gradient.colors = colors;
+    gradient.frame = self.view.bounds;
+    [self.view.layer insertSublayer:gradient atIndex:0];
+    
+    //Buttons color
+    self.practiceButton.layer.borderColor = [UIColor blackColor].CGColor;
+    self.practiceButton.layer.borderWidth = 1.0;
+    self.practiceButton.layer.cornerRadius = 10;
+    self.practiceButton.layer.backgroundColor = [UIColor colorWithWhite:0.9f alpha:0.9f].CGColor;
+    
+    self.learnButton.layer.borderColor = [UIColor blackColor].CGColor;
+    self.learnButton.layer.borderWidth = 1.0;
+    self.learnButton.layer.cornerRadius = 10;
+    self.learnButton.layer.backgroundColor = [UIColor colorWithWhite:0.9f alpha:0.9f].CGColor;
 }
 
 - (void)didReceiveMemoryWarning {

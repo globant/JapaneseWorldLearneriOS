@@ -15,6 +15,7 @@
 @property (strong, nonatomic) IBOutlet UIPickerView *unitFirstPicker;
 @property (strong, nonatomic) IBOutlet UIPickerView *unitSecondPicker;
 - (IBAction)nextButton:(UIButton *)sender;
+@property (strong, nonatomic) IBOutlet UIButton *peakButton;
 
 -(BOOL)verifySelectedUnits;
 

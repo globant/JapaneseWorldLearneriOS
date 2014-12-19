@@ -12,5 +12,7 @@
 @interface MainViewController : UIViewController
 
 - (IBAction)learnButton:(UIButton *)sender;
+@property (strong, nonatomic) IBOutlet UIButton *practiceButton;
+@property (strong, nonatomic) IBOutlet UIButton *learnButton;
 
 @end

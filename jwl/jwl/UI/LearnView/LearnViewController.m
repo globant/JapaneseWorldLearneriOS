@@ -32,6 +32,14 @@
     
     NSString* book = [[self.selection objectForKey:@"book"] stringValue];
     self.title = book;
+    
+    //Background color
+    NSArray *colors = @[(id)[UIColor whiteColor].CGColor,
+                        (id)[UIColor blackColor].CGColor];
+    CAGradientLayer *gradient = [CAGradientLayer layer];
+    gradient.colors = colors;
+    gradient.frame = self.view.bounds;
+    [self.view.layer insertSublayer:gradient atIndex:0];
 }
 
 - (void)didReceiveMemoryWarning {

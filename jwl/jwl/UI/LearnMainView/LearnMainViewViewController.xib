@@ -7,6 +7,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LearnMainViewViewController">
             <connections>
                 <outlet property="bookPicker" destination="Mvx-Lg-LkZ" id="kXC-6s-dCq"/>
+                <outlet property="peakButton" destination="aZl-BP-Ytz" id="JkJ-hI-NV7"/>
                 <outlet property="unitFirstPicker" destination="vlr-Xf-CHa" id="STu-Ci-mfd"/>
                 <outlet property="unitSecondPicker" destination="8v8-4x-ROE" id="M8G-a6-cEN"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -67,7 +68,9 @@
                 </pickerView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aZl-BP-Ytz">
                     <rect key="frame" x="137" y="350" width="46" height="30"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <state key="normal" title="Peak">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
