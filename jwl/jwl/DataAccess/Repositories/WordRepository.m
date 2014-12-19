@@ -18,8 +18,8 @@
 	Word* object = [NSEntityDescription insertNewObjectForEntityForName:wordClass inManagedObjectContext:context];
 	[object setJapanese:[word japanese]];
 	[object setTranslation:[word translation]];
-	[object setUnit:[word unit]];
-	NSError* localError;
+	[object setIdentifier:[word identifier]];
+	NSError* localError = nil;
 	if(![context save:&localError]) {
 		NSLog([NSString stringWithFormat:@"Error, could not save: %@",[localError localizedDescription]],nil);
 		[context rollback];
@@ -49,7 +49,7 @@
     
     [fetchRequest setEntity:entity];
     [fetchRequest setReturnsObjectsAsFaults:NO];
-    NSPredicate* identifierPredicate = [NSPredicate predicateWithFormat:@"id == %d",[identifier intValue]];
+    NSPredicate* identifierPredicate = [NSPredicate predicateWithFormat:@"identifier == %d",[identifier intValue]];
     [fetchRequest setPredicate:identifierPredicate];
     NSError *error;
     NSArray *fetchedObjects = [context executeFetchRequest:fetchRequest error:&error];
@@ -62,6 +62,7 @@
             return [fetchedObjects objectAtIndex:0];
         }
         else {
+			NSLog(@"Fetched Objects 0");
             return nil;
         }
     }

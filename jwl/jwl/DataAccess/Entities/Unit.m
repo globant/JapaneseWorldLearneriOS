@@ -10,5 +10,5 @@
 
 @implementation Unit
 @synthesize name;
-@synthesize book;
+@synthesize words;
 @end

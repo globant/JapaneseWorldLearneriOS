@@ -14,6 +14,5 @@
 
 @property (strong,nonatomic) NSString* japanese;
 @property (strong,nonatomic) NSString* translation;
-@property (strong,nonatomic) Unit* unit;
 
 @end

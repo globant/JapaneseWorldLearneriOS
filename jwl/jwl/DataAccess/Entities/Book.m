@@ -11,5 +11,5 @@
 @implementation Book
 
 @synthesize name;
-
+@synthesize units;
 @end

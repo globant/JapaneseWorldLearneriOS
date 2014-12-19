@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E809AFE31A445F90005DC6BE /* RepositoryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E809AFE21A445F90005DC6BE /* RepositoryTests.m */; };
 		E8E3A6201A3F16BA00CE3678 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E8E3A61F1A3F16BA00CE3678 /* main.m */; };
 		E8E3A6231A3F16BA00CE3678 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E8E3A6221A3F16BA00CE3678 /* AppDelegate.m */; };
 		E8E3A6291A3F16BB00CE3678 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8E3A6281A3F16BB00CE3678 /* ViewController.m */; };
@@ -46,6 +47,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E809AFE21A445F90005DC6BE /* RepositoryTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RepositoryTests.m; sourceTree = "<group>"; };
 		E8E3A61A1A3F16BA00CE3678 /* jwl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = jwl.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8E3A61E1A3F16BA00CE3678 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E8E3A61F1A3F16BA00CE3678 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 			children = (
 				E8E3A63A1A3F16BC00CE3678 /* Supporting Files */,
 				E8FA3B571A3F5F9A00F5BE5B /* SaverTests.m */,
+				E809AFE21A445F90005DC6BE /* RepositoryTests.m */,
 			);
 			path = jwlTests;
 			sourceTree = "<group>";
@@ -440,6 +443,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E8FA3B581A3F5F9A00F5BE5B /* SaverTests.m in Sources */,
+				E809AFE31A445F90005DC6BE /* RepositoryTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -536,6 +540,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = jwl/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -547,6 +552,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = jwl/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

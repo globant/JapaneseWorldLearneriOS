@@ -13,6 +13,6 @@
 
 +(BOOL)saveBook:(Book*) book;
 +(BOOL)removeBook:(Book*)book;
-+(Book*)searchBookWithId:(NSNumber*)identifier;
++(Book*)searchBookWithIdentifier:(NSNumber*)identifier;
 
 @end

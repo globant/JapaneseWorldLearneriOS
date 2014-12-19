@@ -12,6 +12,6 @@
 @interface Book : BaseEntity
 
 @property (strong,nonatomic) NSString* name;
-
+@property (strong,nonatomic) NSSet* units;
 
 @end

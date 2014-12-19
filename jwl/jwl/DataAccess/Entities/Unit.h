@@ -12,6 +12,6 @@
 @interface Unit : BaseEntity
 
 @property (strong,nonatomic) NSString* name;
-@property (strong,nonatomic) Book* book;
+@property (strong,nonatomic) NSSet* words;
 
 @end

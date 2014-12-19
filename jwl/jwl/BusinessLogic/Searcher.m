@@ -14,10 +14,10 @@
 @implementation Searcher
 
 -(Book*)searchBookByIdentifier:(NSNumber *)identifier {
-	return [BookRepository searchBookWithId:identifier];
+	return [BookRepository searchBookWithIdentifier:identifier];
 }
 -(Unit*)searchUnitByIdentifier:(NSNumber*)identifier{
-    return [UnitRepository searchUnitWithId:identifier];
+    return [UnitRepository searchUnitWithIdentifier:identifier];
 }
 -(Word*)searchWordByIdentifier:(NSNumber*)identifier{
     return [WordRepository searchWordWithId:identifier];

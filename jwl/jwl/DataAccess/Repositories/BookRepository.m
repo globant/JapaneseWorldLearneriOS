@@ -20,6 +20,7 @@
 	Book* object = [NSEntityDescription insertNewObjectForEntityForName:bookClass inManagedObjectContext:context];
 	[object setName:[book name]];
 	[object setIdentifier:[book identifier]];
+	[object setUnits:[book units]];
 	NSError* localError;
 	if(![context save:&localError]) {
 		NSLog([NSString stringWithFormat:@"Error, could not save: %@",[localError localizedDescription]],nil);
@@ -41,7 +42,7 @@
 	return TRUE;
 }
 
-+(Book*)searchBookWithId:(NSNumber*)identifier {
++(Book*)searchBookWithIdentifier:(NSNumber*)identifier {
 	NSManagedObjectContext *context = [[CoreDataHelper sharedInstance] managedObjectContext];
 	NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
 	NSEntityDescription *entity = [NSEntityDescription
@@ -63,6 +64,7 @@
 			return [fetchedObjects objectAtIndex:0];
 		}
 		else {
+			NSLog(@"Fetched Objects 0");
 			return nil;
 		}
 	}
