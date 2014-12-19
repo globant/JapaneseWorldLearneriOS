@@ -31,6 +31,8 @@
 		EA1B30231A42115E00425C9C /* LearnMainViewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA1B30211A42115E00425C9C /* LearnMainViewViewController.xib */; };
 		EA6747EB1A43145E00585EC8 /* LearnViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA6747E91A43145E00585EC8 /* LearnViewController.m */; };
 		EA6747EC1A43145E00585EC8 /* LearnViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA6747EA1A43145E00585EC8 /* LearnViewController.xib */; };
+		EA6BB7781A447CB3009CA411 /* LearnTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EA6BB7761A447CB3009CA411 /* LearnTableViewCell.m */; };
+		EA6BB7791A447CB3009CA411 /* LearnTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA6BB7771A447CB3009CA411 /* LearnTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +90,9 @@
 		EA6747E81A43145E00585EC8 /* LearnViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LearnViewController.h; sourceTree = "<group>"; };
 		EA6747E91A43145E00585EC8 /* LearnViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LearnViewController.m; sourceTree = "<group>"; };
 		EA6747EA1A43145E00585EC8 /* LearnViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LearnViewController.xib; sourceTree = "<group>"; };
+		EA6BB7751A447CB3009CA411 /* LearnTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LearnTableViewCell.h; sourceTree = "<group>"; };
+		EA6BB7761A447CB3009CA411 /* LearnTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LearnTableViewCell.m; sourceTree = "<group>"; };
+		EA6BB7771A447CB3009CA411 /* LearnTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LearnTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -212,6 +217,7 @@
 		E8E3A65A1A3F30DB00CE3678 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				EA6BB7741A447C95009CA411 /* LearnViewCell */,
 				EA6747E71A43144800585EC8 /* LearnView */,
 				EA1B301E1A42115E00425C9C /* LearnMainView */,
 				E8FA3B591A3F65E500F5BE5B /* MainView */,
@@ -294,6 +300,16 @@
 			path = LearnView;
 			sourceTree = "<group>";
 		};
+		EA6BB7741A447C95009CA411 /* LearnViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				EA6BB7751A447CB3009CA411 /* LearnTableViewCell.h */,
+				EA6BB7761A447CB3009CA411 /* LearnTableViewCell.m */,
+				EA6BB7771A447CB3009CA411 /* LearnTableViewCell.xib */,
+			);
+			path = LearnViewCell;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -374,6 +390,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA6BB7791A447CB3009CA411 /* LearnTableViewCell.xib in Resources */,
 				E8E3A62E1A3F16BB00CE3678 /* Images.xcassets in Resources */,
 				EA1B30231A42115E00425C9C /* LearnMainViewViewController.xib in Resources */,
 				EA6747EC1A43145E00585EC8 /* LearnViewController.xib in Resources */,
@@ -410,6 +427,7 @@
 				E8FA3B361A3F321200F5BE5B /* Book.m in Sources */,
 				E8E3A6581A3F30CC00CE3678 /* Singleton.m in Sources */,
 				E8FA3B531A3F5A0500F5BE5B /* CoreDataHelper.m in Sources */,
+				EA6BB7781A447CB3009CA411 /* LearnTableViewCell.m in Sources */,
 				E8FA3B491A3F53BC00F5BE5B /* BookRepository.m in Sources */,
 				E8FA3B3C1A3F338100F5BE5B /* Word.m in Sources */,
 				E8FA3B5D1A3F65F900F5BE5B /* MainViewController.m in Sources */,
