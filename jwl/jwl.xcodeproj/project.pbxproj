@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		E809AFE31A445F90005DC6BE /* RepositoryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E809AFE21A445F90005DC6BE /* RepositoryTests.m */; };
+		E809AFE71A447C06005DC6BE /* InitialGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = E809AFE61A447C06005DC6BE /* InitialGenerator.m */; };
+		E809AFEA1A44A6D3005DC6BE /* BaseRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = E809AFE91A44A6D3005DC6BE /* BaseRepository.m */; };
 		E8E3A6201A3F16BA00CE3678 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E8E3A61F1A3F16BA00CE3678 /* main.m */; };
 		E8E3A6231A3F16BA00CE3678 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E8E3A6221A3F16BA00CE3678 /* AppDelegate.m */; };
 		E8E3A6291A3F16BB00CE3678 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8E3A6281A3F16BB00CE3678 /* ViewController.m */; };
@@ -48,6 +50,10 @@
 
 /* Begin PBXFileReference section */
 		E809AFE21A445F90005DC6BE /* RepositoryTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RepositoryTests.m; sourceTree = "<group>"; };
+		E809AFE51A447C06005DC6BE /* InitialGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InitialGenerator.h; sourceTree = "<group>"; };
+		E809AFE61A447C06005DC6BE /* InitialGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InitialGenerator.m; sourceTree = "<group>"; };
+		E809AFE81A44A6D3005DC6BE /* BaseRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseRepository.h; sourceTree = "<group>"; };
+		E809AFE91A44A6D3005DC6BE /* BaseRepository.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseRepository.m; sourceTree = "<group>"; };
 		E8E3A61A1A3F16BA00CE3678 /* jwl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = jwl.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8E3A61E1A3F16BA00CE3678 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E8E3A61F1A3F16BA00CE3678 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -115,6 +121,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E809AFE41A447BEF005DC6BE /* Generators */ = {
+			isa = PBXGroup;
+			children = (
+				E809AFE51A447C06005DC6BE /* InitialGenerator.h */,
+				E809AFE61A447C06005DC6BE /* InitialGenerator.m */,
+			);
+			path = Generators;
+			sourceTree = "<group>";
+		};
 		E8E3A6111A3F16BA00CE3678 = {
 			isa = PBXGroup;
 			children = (
@@ -137,6 +152,7 @@
 		E8E3A61C1A3F16BA00CE3678 /* jwl */ = {
 			isa = PBXGroup;
 			children = (
+				E809AFE41A447BEF005DC6BE /* Generators */,
 				E8E3A65A1A3F30DB00CE3678 /* UI */,
 				E8E3A6591A3F30D500CE3678 /* DataAccess */,
 				E8E3A6501A3F30CC00CE3678 /* BusinessLogic */,
@@ -260,6 +276,8 @@
 				E8FA3B4B1A3F566C00F5BE5B /* UnitRepository.m */,
 				E8FA3B4D1A3F57FA00F5BE5B /* WordRepository.h */,
 				E8FA3B4E1A3F57FA00F5BE5B /* WordRepository.m */,
+				E809AFE81A44A6D3005DC6BE /* BaseRepository.h */,
+				E809AFE91A44A6D3005DC6BE /* BaseRepository.m */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -422,6 +440,7 @@
 				E8E3A65F1A3F313500CE3678 /* BaseEntity.m in Sources */,
 				E8E3A6291A3F16BB00CE3678 /* ViewController.m in Sources */,
 				EA1B30221A42115E00425C9C /* LearnMainViewViewController.m in Sources */,
+				E809AFEA1A44A6D3005DC6BE /* BaseRepository.m in Sources */,
 				E8FA3B3F1A3F348F00F5BE5B /* dataModel.xcdatamodeld in Sources */,
 				EA6747EB1A43145E00585EC8 /* LearnViewController.m in Sources */,
 				E8E3A6201A3F16BA00CE3678 /* main.m in Sources */,
@@ -429,6 +448,7 @@
 				E8FA3B4F1A3F57FA00F5BE5B /* WordRepository.m in Sources */,
 				E8FA3B361A3F321200F5BE5B /* Book.m in Sources */,
 				E8E3A6581A3F30CC00CE3678 /* Singleton.m in Sources */,
+				E809AFE71A447C06005DC6BE /* InitialGenerator.m in Sources */,
 				E8FA3B531A3F5A0500F5BE5B /* CoreDataHelper.m in Sources */,
 				EA6BB7781A447CB3009CA411 /* LearnTableViewCell.m in Sources */,
 				E8FA3B491A3F53BC00F5BE5B /* BookRepository.m in Sources */,

@@ -10,10 +10,14 @@
 #import <CoreData/CoreData.h>
 #import "CoreDataHelper.h"
 
-#define bookClass @"Book"
+
+@interface BaseRepository()
+
+@end
 
 @implementation BookRepository
 
+NSString* const bookClass = @"Book";
 
 +(BOOL)saveBook:(Book *)book {
 	NSManagedObjectContext *context = [[CoreDataHelper sharedInstance] managedObjectContext];
@@ -42,32 +46,11 @@
 	return TRUE;
 }
 
-+(Book*)searchBookWithIdentifier:(NSNumber*)identifier {
-	NSManagedObjectContext *context = [[CoreDataHelper sharedInstance] managedObjectContext];
-	NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
-	NSEntityDescription *entity = [NSEntityDescription
-								   entityForName:bookClass
-								   inManagedObjectContext:context];
-	
-	[fetchRequest setEntity:entity];
-	[fetchRequest setReturnsObjectsAsFaults:NO];
-	NSPredicate* identifierPredicate = [NSPredicate predicateWithFormat:@"identifier == %d",[identifier intValue]];
-	[fetchRequest setPredicate:identifierPredicate];
-	NSError *error;
-	NSArray *fetchedObjects = [context executeFetchRequest:fetchRequest error:&error];
-	if(error) {
-		NSLog([NSString stringWithFormat:@"Error recovering %@",[error localizedDescription]], nil);
-		return nil;
-	}
-	else {
-		if(fetchedObjects.count > 0) {
-			return [fetchedObjects objectAtIndex:0];
-		}
-		else {
-			NSLog(@"Fetched Objects 0");
-			return nil;
-		}
-	}
++(NSArray*)searchBookWithPredicates:(NSCompoundPredicate*)predicates {
+	return [super searchAllWithPredicates:predicates andClassName:bookClass];
 }
 
++(Book*)searchBookWithIdentifier:(int)identifier {
+	return (Book*) [super searchWithId:identifier andClassName:bookClass];
+}
 @end

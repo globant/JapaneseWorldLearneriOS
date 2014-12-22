@@ -11,6 +11,7 @@
 #import "UnitRepository.h"
 #import "WordRepository.h"
 #import "BookRepository.h"
+#import "InitialGenerator.h"
 
 @interface RepositoryTests : XCTestCase
 
@@ -18,8 +19,10 @@
 
 @implementation RepositoryTests
 
-- (void)setUp {
++ (void)setUp {
     [super setUp];
+	InitialGenerator* generator = [[InitialGenerator alloc]init];
+	[generator initialBookGenerator];
 }
 
 - (void)tearDown {
@@ -28,21 +31,26 @@
 }
 
 -(void)testRemoveWord {
-	Word* word = [WordRepository searchWordWithId:[NSNumber numberWithInt:1]];
+	Word* word = [WordRepository searchWordWithIdentifier:1];
 	BOOL result = [WordRepository removeWord:word];
 	XCTAssertTrue(result);
 }
 
 -(void)testRemoveUnit {
-	Unit* unit = [UnitRepository searchUnitWithIdentifier:[NSNumber numberWithInt:1]];
+	Unit* unit = [UnitRepository searchUnitWithIdentifier:1];
 	BOOL result = [UnitRepository removeUnit:unit];
 	XCTAssertTrue(result);
 }
 
 -(void)testRemoveBook {
-	Book* book = [BookRepository searchBookWithIdentifier:[NSNumber numberWithInt:1]];
+	Book* book = [BookRepository searchBookWithIdentifier:1];
 	BOOL result = [BookRepository removeBook:book];
 	XCTAssertTrue(result);
+}
+
+-(void)testReadAllBooks {
+	NSArray* result = [BookRepository searchAllWithPredicates:nil andClassName:bookClass];
+	XCTAssertTrue(TRUE);
 }
 
 @end

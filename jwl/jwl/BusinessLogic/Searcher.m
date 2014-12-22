@@ -13,14 +13,22 @@
 
 @implementation Searcher
 
--(Book*)searchBookByIdentifier:(NSNumber *)identifier {
+-(Book*)searchBookByIdentifier:(int)identifier {
 	return [BookRepository searchBookWithIdentifier:identifier];
 }
--(Unit*)searchUnitByIdentifier:(NSNumber*)identifier{
-    return [UnitRepository searchUnitWithIdentifier:identifier];
+
+-(Unit*)searchUnitByIdentifier:(int)identifier {
+	return [UnitRepository searchUnitWithIdentifier:identifier];
 }
--(Word*)searchWordByIdentifier:(NSNumber*)identifier{
-    return [WordRepository searchWordWithId:identifier];
+
+-(Word*)searchWordByIdentifier:(int)identifier {
+	return [WordRepository searchWordWithIdentifier:identifier];
 }
+
+-(NSArray*)searchAllBooks {
+	return [BookRepository searchAllWithPredicates:nil andClassName:bookClass];
+}
+
+
 
 @end

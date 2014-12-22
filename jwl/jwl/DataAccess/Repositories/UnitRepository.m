@@ -9,9 +9,9 @@
 #import "UnitRepository.h"
 #import "CoreDataHelper.h"
 
-#define unitClass @"Unit"
-
 @implementation UnitRepository
+
+NSString* const unitClass = @"Unit";
 
 +(BOOL)saveUnit:(Unit *)unit {
 	NSManagedObjectContext *context = [[CoreDataHelper sharedInstance] managedObjectContext];
@@ -40,33 +40,11 @@
 	return TRUE;
 }
 
-+(Unit*)searchUnitWithIdentifier:(NSNumber*)identifier {
-    NSManagedObjectContext *context = [[CoreDataHelper sharedInstance] managedObjectContext];
-    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
-    NSEntityDescription *entity = [NSEntityDescription
-                                   entityForName:unitClass
-                                   inManagedObjectContext:context];
-    [fetchRequest setEntity:entity];
-    [fetchRequest setReturnsObjectsAsFaults:FALSE];
-    NSPredicate* identifierPredicate = [NSPredicate predicateWithFormat:@"identifier == %d",[identifier intValue]];
-	//NSArray* predicates = [NSArray arrayWithObjects:identifierPredicate,bookPredicate, nil];
-	//NSCompoundPredicate* compoundPredicate = [NSCompoundPredicate andPredicateWithSubpredicates:predicates];
-    [fetchRequest setPredicate:identifierPredicate];
-    NSError *error;
-    NSArray *fetchedObjects = [context executeFetchRequest:fetchRequest error:&error];
-    if(error) {
-        NSLog([NSString stringWithFormat:@"Error recovering %@",[error localizedDescription]], nil);
-        return nil;
-    }
-    else {
-        if(fetchedObjects.count > 0) {
-            return [fetchedObjects objectAtIndex:0];
-        }
-        else {
-			NSLog(@"Fetched Objects 0");
-            return nil;
-        }
-    }
++(NSArray*)searchUnitWithPredicates:(NSCompoundPredicate *)predicates {
+	return [super searchAllWithPredicates:predicates andClassName:unitClass];
 }
 
++(Unit*)searchUnitWithIdentifier:(int)identifier {
+	return (Unit*) [super searchWithId:identifier andClassName:unitClass];
+}
 @end

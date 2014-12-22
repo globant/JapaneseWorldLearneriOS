@@ -8,10 +8,16 @@
 
 #import <Foundation/Foundation.h>
 #import "Word.h"
+#import "BaseRepository.h"
 
-@interface WordRepository : NSObject
+@interface WordRepository : BaseRepository
 
 +(BOOL)saveWord:(Word*)word;
 +(BOOL)removeWord:(Word*)word;
-+(Word*)searchWordWithId:(NSNumber*)identifier;
++(NSArray*)searchBookWithPredicates:(NSCompoundPredicate*)predicates;
++(Word*)searchWordWithIdentifier:(int)identifier;
+
+extern NSString* const wordClass;
+
 @end
+

@@ -8,10 +8,15 @@
 
 #import <Foundation/Foundation.h>
 #import "Unit.h"
+#import "BaseRepository.h"
 
-@interface UnitRepository : NSObject
+@interface UnitRepository : BaseRepository
 
 +(BOOL)saveUnit:(Unit*)unit;
 +(BOOL)removeUnit:(Unit*)unit;
-+(Unit*)searchUnitWithIdentifier:(NSNumber*)identifier;
++(NSArray*)searchUnitWithPredicates:(NSCompoundPredicate*)predicates;
++(Unit*)searchUnitWithIdentifier:(int)identifier;
+
+extern NSString* const unitClass;
+
 @end

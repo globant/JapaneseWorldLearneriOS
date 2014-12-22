@@ -8,11 +8,15 @@
 
 #import <Foundation/Foundation.h>
 #import "Book.h"
+#import "BaseRepository.h"
 
-@interface BookRepository : NSObject
+@interface BookRepository : BaseRepository
 
 +(BOOL)saveBook:(Book*) book;
 +(BOOL)removeBook:(Book*)book;
-+(Book*)searchBookWithIdentifier:(NSNumber*)identifier;
++(NSArray*)searchBookWithPredicates:(NSCompoundPredicate*)predicates;
++(Book*)searchBookWithIdentifier:(int)identifier;
+
+extern NSString* const bookClass;
 
 @end

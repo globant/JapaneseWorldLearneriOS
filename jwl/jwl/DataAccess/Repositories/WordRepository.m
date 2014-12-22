@@ -9,9 +9,9 @@
 #import "WordRepository.h"
 #import "CoreDataHelper.h"
 
-#define wordClass @"Word"
-
 @implementation WordRepository
+
+NSString* const wordClass = @"Word";
 
 +(BOOL)saveWord:(Word *)word {
 	NSManagedObjectContext *context = [[CoreDataHelper sharedInstance] managedObjectContext];
@@ -40,32 +40,13 @@
 	return TRUE;
 }
 
-+(Word*)searchWordWithId:(NSNumber*)identifier {
-    NSManagedObjectContext *context = [[CoreDataHelper sharedInstance] managedObjectContext];
-    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
-    NSEntityDescription *entity = [NSEntityDescription
-                                   entityForName:wordClass
-                                   inManagedObjectContext:context];
-    
-    [fetchRequest setEntity:entity];
-    [fetchRequest setReturnsObjectsAsFaults:NO];
-    NSPredicate* identifierPredicate = [NSPredicate predicateWithFormat:@"identifier == %d",[identifier intValue]];
-    [fetchRequest setPredicate:identifierPredicate];
-    NSError *error;
-    NSArray *fetchedObjects = [context executeFetchRequest:fetchRequest error:&error];
-    if(error) {
-        NSLog([NSString stringWithFormat:@"Error recovering %@",[error localizedDescription]], nil);
-        return nil;
-    }
-    else {
-        if(fetchedObjects.count > 0) {
-            return [fetchedObjects objectAtIndex:0];
-        }
-        else {
-			NSLog(@"Fetched Objects 0");
-            return nil;
-        }
-    }
+
++(NSArray*)searchBookWithPredicates:(NSCompoundPredicate *)predicates {
+	return [super searchAllWithPredicates:predicates andClassName:wordClass];
+}
+
++(Word*)searchWordWithIdentifier:(int)identifier {
+	return (Word*) [super searchWithId:identifier andClassName:wordClass];
 }
 
 @end

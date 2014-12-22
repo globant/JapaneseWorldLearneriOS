@@ -13,8 +13,10 @@
 
 @interface Searcher : NSObject
 
--(Book*)searchBookByIdentifier:(NSNumber*)identifier;
--(Unit*)searchUnitByIdentifier:(NSNumber*)identifier;
--(Word*)searchWordByIdentifier:(NSNumber*)identifier;
+-(Book*)searchBookByIdentifier:(int)identifier;
+-(Unit*)searchUnitByIdentifier:(int)identifier;
+-(Word*)searchWordByIdentifier:(int)identifier;
+
+-(NSArray*)searchAllBooks;
 
 @end
