@@ -10,6 +10,7 @@
 #import "BookRepository.h"
 #import "UnitRepository.h"
 #import "WordRepository.h"
+#import "UserRepository.h"
 
 @implementation Saver
 
@@ -23,6 +24,14 @@
 
 -(BOOL)saveWord:(Word *)word {
 	return [WordRepository saveWord:word];
+}
+
+-(BOOL)saveUser:(User *)user {
+	return [UserRepository saveUser:user];
+}
+
+-(BOOL)updateUser:(User*)user {
+	return [UserRepository updateUser:user];
 }
 
 @end

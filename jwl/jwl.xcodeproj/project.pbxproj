@@ -10,6 +10,9 @@
 		E809AFE31A445F90005DC6BE /* RepositoryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E809AFE21A445F90005DC6BE /* RepositoryTests.m */; };
 		E809AFE71A447C06005DC6BE /* InitialGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = E809AFE61A447C06005DC6BE /* InitialGenerator.m */; };
 		E809AFEA1A44A6D3005DC6BE /* BaseRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = E809AFE91A44A6D3005DC6BE /* BaseRepository.m */; };
+		E821E75D1A48581400D272A4 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = E821E75C1A48581400D272A4 /* User.m */; };
+		E821E7601A485A1600D272A4 /* UserHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E821E75F1A485A1600D272A4 /* UserHelper.m */; };
+		E821E7631A485C0700D272A4 /* UserRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = E821E7621A485C0700D272A4 /* UserRepository.m */; };
 		E8E3A6201A3F16BA00CE3678 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E8E3A61F1A3F16BA00CE3678 /* main.m */; };
 		E8E3A6231A3F16BA00CE3678 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E8E3A6221A3F16BA00CE3678 /* AppDelegate.m */; };
 		E8E3A6291A3F16BB00CE3678 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8E3A6281A3F16BB00CE3678 /* ViewController.m */; };
@@ -54,6 +57,12 @@
 		E809AFE61A447C06005DC6BE /* InitialGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InitialGenerator.m; sourceTree = "<group>"; };
 		E809AFE81A44A6D3005DC6BE /* BaseRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseRepository.h; sourceTree = "<group>"; };
 		E809AFE91A44A6D3005DC6BE /* BaseRepository.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseRepository.m; sourceTree = "<group>"; };
+		E821E75B1A48581400D272A4 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		E821E75C1A48581400D272A4 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		E821E75E1A485A1600D272A4 /* UserHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserHelper.h; sourceTree = "<group>"; };
+		E821E75F1A485A1600D272A4 /* UserHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserHelper.m; sourceTree = "<group>"; };
+		E821E7611A485C0600D272A4 /* UserRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserRepository.h; sourceTree = "<group>"; };
+		E821E7621A485C0700D272A4 /* UserRepository.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserRepository.m; sourceTree = "<group>"; };
 		E8E3A61A1A3F16BA00CE3678 /* jwl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = jwl.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8E3A61E1A3F16BA00CE3678 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E8E3A61F1A3F16BA00CE3678 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -152,6 +161,7 @@
 		E8E3A61C1A3F16BA00CE3678 /* jwl */ = {
 			isa = PBXGroup;
 			children = (
+				E8E3A65B1A3F30F100CE3678 /* Entities */,
 				E809AFE41A447BEF005DC6BE /* Generators */,
 				E8E3A65A1A3F30DB00CE3678 /* UI */,
 				E8E3A6591A3F30D500CE3678 /* DataAccess */,
@@ -209,6 +219,8 @@
 		E8E3A6511A3F30CC00CE3678 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				E821E75E1A485A1600D272A4 /* UserHelper.h */,
+				E821E75F1A485A1600D272A4 /* UserHelper.m */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -227,7 +239,6 @@
 			children = (
 				E8FA3B501A3F5A0500F5BE5B /* Helpers */,
 				E8FA3B401A3F3A1C00F5BE5B /* Repositories */,
-				E8E3A65B1A3F30F100CE3678 /* Entities */,
 				E8E3A65C1A3F30F100CE3678 /* Model */,
 			);
 			path = DataAccess;
@@ -255,8 +266,11 @@
 				E8FA3B381A3F326800F5BE5B /* Unit.m */,
 				E8FA3B3A1A3F338000F5BE5B /* Word.h */,
 				E8FA3B3B1A3F338100F5BE5B /* Word.m */,
+				E821E75B1A48581400D272A4 /* User.h */,
+				E821E75C1A48581400D272A4 /* User.m */,
 			);
-			path = Entities;
+			name = Entities;
+			path = DataAccess/Entities;
 			sourceTree = "<group>";
 		};
 		E8E3A65C1A3F30F100CE3678 /* Model */ = {
@@ -278,6 +292,8 @@
 				E8FA3B4E1A3F57FA00F5BE5B /* WordRepository.m */,
 				E809AFE81A44A6D3005DC6BE /* BaseRepository.h */,
 				E809AFE91A44A6D3005DC6BE /* BaseRepository.m */,
+				E821E7611A485C0600D272A4 /* UserRepository.h */,
+				E821E7621A485C0700D272A4 /* UserRepository.m */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -435,11 +451,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				E8E3A6231A3F16BA00CE3678 /* AppDelegate.m in Sources */,
+				E821E7601A485A1600D272A4 /* UserHelper.m in Sources */,
+				E821E7631A485C0700D272A4 /* UserRepository.m in Sources */,
 				E8FA3B391A3F326800F5BE5B /* Unit.m in Sources */,
 				E8FA3B611A3F7C4500F5BE5B /* Searcher.m in Sources */,
 				E8E3A65F1A3F313500CE3678 /* BaseEntity.m in Sources */,
 				E8E3A6291A3F16BB00CE3678 /* ViewController.m in Sources */,
 				EA1B30221A42115E00425C9C /* LearnMainViewViewController.m in Sources */,
+				E821E75D1A48581400D272A4 /* User.m in Sources */,
 				E809AFEA1A44A6D3005DC6BE /* BaseRepository.m in Sources */,
 				E8FA3B3F1A3F348F00F5BE5B /* dataModel.xcdatamodeld in Sources */,
 				EA6747EB1A43145E00585EC8 /* LearnViewController.m in Sources */,
