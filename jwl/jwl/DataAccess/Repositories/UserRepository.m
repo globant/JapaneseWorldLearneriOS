@@ -34,7 +34,7 @@ NSString* const userClass = @"User";
 	}
 	return TRUE;
 }
-
+/*
 +(BOOL)updateUser:(User *)user {
 	NSManagedObjectContext *context = [[CoreDataHelper sharedInstance] managedObjectContext];
 	NSError *error;
@@ -45,5 +45,5 @@ NSString* const userClass = @"User";
 	}
 	return TRUE;
 }
-
+*/
 @end

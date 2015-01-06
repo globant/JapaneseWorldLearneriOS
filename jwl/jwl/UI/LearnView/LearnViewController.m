@@ -18,6 +18,7 @@
 @property(nonatomic,strong) NSDictionary* selection;
 @property(nonatomic,strong) NSMutableArray* unitsArray;
 @property(nonatomic,strong) Book* book;
+@property(nonatomic,strong) Book* book2;
 
 @end
 
@@ -43,13 +44,15 @@
     self.unitsTable.delegate = self;
     self.unitsTable.dataSource = self;
     
-    //[InitialGenerator saveData];
+    [InitialGenerator saveData];
    
     NSString *path = [InitialGenerator pathForDataFile];
     NSMutableDictionary* books = [NSMutableDictionary new];
     books = [NSKeyedUnarchiver unarchiveObjectWithFile:path];
     
     self.book = [books objectForKey:@"book"];
+    
+    self.book2 = [books objectForKey:@"book2"];
     
     self.unitsArray = self.book.units;
     

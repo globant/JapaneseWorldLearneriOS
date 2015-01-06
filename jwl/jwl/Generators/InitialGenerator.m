@@ -65,11 +65,16 @@
     [book setName:@"Libro 1"];
     [book setUnits:units];
     
+    Book* book2 = [[Book alloc]init];
+    [book2 setIdentifier:[NSNumber numberWithInt:0]];
+    [book2 setName:@"Libro 2"];
+    
     NSString *path = [InitialGenerator pathForDataFile];
     
     NSMutableDictionary *rootObject = [NSMutableDictionary new];
     
     [rootObject setObject:book forKey:@"book"];
+    [rootObject setObject:book2 forKey:@"book2"];
     
     [NSKeyedArchiver archiveRootObject: rootObject toFile: path];
 }
