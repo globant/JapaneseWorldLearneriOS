@@ -7,11 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "LearnTableViewCell.h"
 
 @interface LearnViewController : UIViewController <UITableViewDataSource , UITableViewDelegate>
 
-@property (strong, nonatomic) IBOutlet UITableView *wordTable;
-- (instancetype) initWithSelection:(NSDictionary*)theselection;
+@property (strong, nonatomic) IBOutlet UITableView *unitsTable;
+- (instancetype) initWithSelection:(NSDictionary*)theSelection;
 
 @end

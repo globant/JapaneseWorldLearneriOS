@@ -7,9 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <CoreData/CoreData.h>
 
-@interface BaseEntity : NSManagedObject
+@interface BaseEntity : NSObject 
 
 @property (strong,nonatomic) NSNumber* identifier;
 

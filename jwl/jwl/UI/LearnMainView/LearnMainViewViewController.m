@@ -7,6 +7,7 @@
 //
 
 #import "LearnMainViewViewController.h"
+#import "LearnViewController.h"
 
 @interface LearnMainViewViewController ()
 

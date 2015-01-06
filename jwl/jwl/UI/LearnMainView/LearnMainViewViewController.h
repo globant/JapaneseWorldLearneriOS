@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "LearnViewController.h"
 
 @interface LearnMainViewViewController : UIViewController <UIPickerViewDataSource, UIPickerViewDelegate>
 

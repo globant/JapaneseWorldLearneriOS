@@ -7,12 +7,13 @@
 //
 
 #import "BaseEntity.h"
-#import "Unit.h"
-#import "Book.h"
 
 @interface Word : BaseEntity
 
 @property (strong,nonatomic) NSString* japanese;
 @property (strong,nonatomic) NSString* translation;
+
+-(id)initWithCoder:(NSCoder*)aDecoder;
+-(void)encodeWithCoder: (NSCoder *)coder;
 
 @end

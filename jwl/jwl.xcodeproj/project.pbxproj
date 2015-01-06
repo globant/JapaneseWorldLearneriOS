@@ -20,7 +20,6 @@
 		E8FA3B361A3F321200F5BE5B /* Book.m in Sources */ = {isa = PBXBuildFile; fileRef = E8FA3B351A3F321200F5BE5B /* Book.m */; };
 		E8FA3B391A3F326800F5BE5B /* Unit.m in Sources */ = {isa = PBXBuildFile; fileRef = E8FA3B381A3F326800F5BE5B /* Unit.m */; };
 		E8FA3B3C1A3F338100F5BE5B /* Word.m in Sources */ = {isa = PBXBuildFile; fileRef = E8FA3B3B1A3F338100F5BE5B /* Word.m */; };
-		E8FA3B3F1A3F348F00F5BE5B /* dataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E8FA3B3D1A3F348F00F5BE5B /* dataModel.xcdatamodeld */; };
 		E8FA3B491A3F53BC00F5BE5B /* BookRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = E8FA3B481A3F53BC00F5BE5B /* BookRepository.m */; };
 		E8FA3B4C1A3F566C00F5BE5B /* UnitRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = E8FA3B4B1A3F566C00F5BE5B /* UnitRepository.m */; };
 		E8FA3B4F1A3F57FA00F5BE5B /* WordRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = E8FA3B4E1A3F57FA00F5BE5B /* WordRepository.m */; };
@@ -75,7 +74,6 @@
 		E8FA3B381A3F326800F5BE5B /* Unit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Unit.m; sourceTree = "<group>"; };
 		E8FA3B3A1A3F338000F5BE5B /* Word.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Word.h; sourceTree = "<group>"; };
 		E8FA3B3B1A3F338100F5BE5B /* Word.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Word.m; sourceTree = "<group>"; };
-		E8FA3B3E1A3F348F00F5BE5B /* dataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = dataModel.xcdatamodel; sourceTree = "<group>"; };
 		E8FA3B471A3F53BC00F5BE5B /* BookRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookRepository.h; sourceTree = "<group>"; };
 		E8FA3B481A3F53BC00F5BE5B /* BookRepository.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookRepository.m; sourceTree = "<group>"; };
 		E8FA3B4A1A3F566C00F5BE5B /* UnitRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnitRepository.h; sourceTree = "<group>"; };
@@ -228,7 +226,6 @@
 				E8FA3B501A3F5A0500F5BE5B /* Helpers */,
 				E8FA3B401A3F3A1C00F5BE5B /* Repositories */,
 				E8E3A65B1A3F30F100CE3678 /* Entities */,
-				E8E3A65C1A3F30F100CE3678 /* Model */,
 			);
 			path = DataAccess;
 			sourceTree = "<group>";
@@ -257,14 +254,6 @@
 				E8FA3B3B1A3F338100F5BE5B /* Word.m */,
 			);
 			path = Entities;
-			sourceTree = "<group>";
-		};
-		E8E3A65C1A3F30F100CE3678 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				E8FA3B3D1A3F348F00F5BE5B /* dataModel.xcdatamodeld */,
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		E8FA3B401A3F3A1C00F5BE5B /* Repositories */ = {
@@ -441,7 +430,6 @@
 				E8E3A6291A3F16BB00CE3678 /* ViewController.m in Sources */,
 				EA1B30221A42115E00425C9C /* LearnMainViewViewController.m in Sources */,
 				E809AFEA1A44A6D3005DC6BE /* BaseRepository.m in Sources */,
-				E8FA3B3F1A3F348F00F5BE5B /* dataModel.xcdatamodeld in Sources */,
 				EA6747EB1A43145E00585EC8 /* LearnViewController.m in Sources */,
 				E8E3A6201A3F16BA00CE3678 /* main.m in Sources */,
 				E8FA3B4C1A3F566C00F5BE5B /* UnitRepository.m in Sources */,
@@ -643,19 +631,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		E8FA3B3D1A3F348F00F5BE5B /* dataModel.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				E8FA3B3E1A3F348F00F5BE5B /* dataModel.xcdatamodel */,
-			);
-			currentVersion = E8FA3B3E1A3F348F00F5BE5B /* dataModel.xcdatamodel */;
-			path = dataModel.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = E8E3A6121A3F16BA00CE3678 /* Project object */;
 }

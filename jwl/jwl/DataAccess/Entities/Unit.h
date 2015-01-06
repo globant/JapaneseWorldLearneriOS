@@ -7,11 +7,14 @@
 //
 
 #import "BaseEntity.h"
-#import "Book.h"
+#import "Word.h"
 
 @interface Unit : BaseEntity
 
 @property (strong,nonatomic) NSString* name;
-@property (strong,nonatomic) NSSet* words;
+@property (strong,nonatomic) NSMutableArray* words;
+
+-(id)initWithCoder:(NSCoder*)aDecoder;
+-(void)encodeWithCoder: (NSCoder *)coder;
 
 @end

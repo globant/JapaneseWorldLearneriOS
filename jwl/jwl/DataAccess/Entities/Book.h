@@ -8,10 +8,14 @@
 
 #import <Foundation/Foundation.h>
 #import "BaseEntity.h"
+#import "Unit.h"
 
-@interface Book : BaseEntity
+@interface Book : BaseEntity <NSCoding>
 
 @property (strong,nonatomic) NSString* name;
-@property (strong,nonatomic) NSSet* units;
+@property (strong,nonatomic) NSMutableArray* units;
+
+-(id)initWithCoder:(NSCoder*)aDecoder;
+-(void)encodeWithCoder: (NSCoder *)coder;
 
 @end

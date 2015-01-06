@@ -31,7 +31,7 @@
     // Put teardown code here. This method is called after the invocation of each test method in the class.
     [super tearDown];
 }
-
+/*
 -(void)testSaveWord {
 	NSEntityDescription* entity = [NSEntityDescription entityForName:@"Word" inManagedObjectContext:[[CoreDataHelper sharedInstance]managedObjectContext]];
 	Word* word = [[Word alloc] initWithEntity:entity insertIntoManagedObjectContext:nil];
@@ -65,5 +65,5 @@
 	BOOL result = [self.saver saveBook:book];
 	XCTAssertTrue(result);
 }
-
+*/
 @end

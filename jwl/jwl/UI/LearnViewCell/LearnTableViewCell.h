@@ -11,8 +11,7 @@
 
 @interface LearnTableViewCell : UITableViewCell
 
-@property (strong, nonatomic) IBOutlet UILabel *kanjiLabel;
-@property (strong, nonatomic) IBOutlet UILabel *translationLabel;
+
 @property (weak, nonatomic) id delegate;
 @property (weak, nonatomic) NSMutableArray *columns;
 

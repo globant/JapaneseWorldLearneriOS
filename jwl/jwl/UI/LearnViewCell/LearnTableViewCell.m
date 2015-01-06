@@ -8,7 +8,22 @@
 
 #import "LearnTableViewCell.h"
 
+@interface LearnTableViewCell()
+
+@property (strong, nonatomic) IBOutlet UILabel *kanjiLabel;
+@property (strong, nonatomic) IBOutlet UILabel *translationLabel;
+
+@end
+
 @implementation LearnTableViewCell
+
+-(instancetype)init {
+    if(self = [super init]) {
+        self.kanjiLabel = [[UILabel alloc]init];
+        self.translationLabel = [[UILabel alloc]init];
+    }
+    return self;
+}
 
 - (void)awakeFromNib {
     // Initialization code
@@ -21,14 +36,14 @@
 }
 
 -(void)loadLearnCell:(Word*)word{
-    self.kanjiLabel.text = word.japanese;
-    self.translationLabel.text = word.translation;
+    [self.kanjiLabel setText:word.japanese];
+    [self.translationLabel setText:word.translation];
 }
 
 - (void)addColumn:(CGFloat)position {
     [self.columns addObject:[NSNumber numberWithFloat:position]];
 }
-
+/*
 - (void)drawRect:(CGRect)rect {
     CGContextRef ctx = UIGraphicsGetCurrentContext();
     // Use the same color and width as the default cell separator for now
@@ -45,5 +60,5 @@
     
     [super drawRect:rect];
 }
-
+*/
 @end

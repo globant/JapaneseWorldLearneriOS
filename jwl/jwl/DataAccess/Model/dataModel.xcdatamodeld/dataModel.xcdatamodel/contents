@@ -3,12 +3,10 @@
     <entity name="Book" representedClassName="Book" syncable="YES">
         <attribute name="identifier" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="units" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Unit" syncable="YES"/>
     </entity>
     <entity name="Unit" representedClassName="Unit" syncable="YES">
         <attribute name="identifier" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="words" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Word" syncable="YES"/>
     </entity>
     <entity name="Word" representedClassName="Word" syncable="YES">
         <attribute name="identifier" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
@@ -16,8 +14,8 @@
         <attribute name="translation" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Book" positionX="-6120" positionY="-3670" width="128" height="88"/>
-        <element name="Unit" positionX="-6120" positionY="-3528" width="128" height="88"/>
+        <element name="Book" positionX="-6120" positionY="-3670" width="128" height="73"/>
+        <element name="Unit" positionX="-6120" positionY="-3528" width="128" height="75"/>
         <element name="Word" positionX="-6120" positionY="-3384" width="128" height="88"/>
     </elements>
 </model>

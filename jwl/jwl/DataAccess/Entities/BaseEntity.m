@@ -15,4 +15,17 @@
 
 @synthesize identifier;
 
+- (id)initWithCoder:(NSCoder *)aDecoder {
+    if ([self init])
+    {
+        //TODO usar constantes
+        [self setIdentifier: [aDecoder decodeObjectForKey:@"identifier"]];
+    }
+    return self;
+}
+
+- (void) encodeWithCoder: (NSCoder *)coder {
+    [coder encodeObject:self.identifier forKey:@"identifier"];
+}
+
 @end

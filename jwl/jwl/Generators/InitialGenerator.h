@@ -7,7 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Singleton.h"
 
-@interface InitialGenerator : NSObject
--(void)initialBookGenerator;
+@interface InitialGenerator : Singleton
+
+//-(void)initialBookGenerator;
++(void)saveData;
++(NSMutableDictionary*)loadData;
++(NSString *) pathForDataFile;
 @end

@@ -12,4 +12,24 @@
 
 @synthesize name;
 @synthesize units;
+
+- (instancetype)initWithCoder:(NSCoder *)aDecoder {
+    if (self = [self init])
+    {
+        [self setName: [aDecoder decodeObjectForKey:@"name"]];
+        
+        NSData *storedData =  [aDecoder decodeObjectForKey:@"units"];
+        self.units = [NSMutableArray arrayWithArray:[NSKeyedUnarchiver unarchiveObjectWithData:storedData]];
+    }
+    return self;
+}
+
+- (void) encodeWithCoder: (NSCoder *)coder {
+    [coder encodeObject:self.name forKey:@"name"];
+    
+    NSData *theUnits = [NSKeyedArchiver archivedDataWithRootObject:self.units];
+    
+    [coder encodeObject:theUnits forKey:@"units"];
+}
+
 @end
