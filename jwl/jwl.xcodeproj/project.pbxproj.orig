@@ -237,7 +237,11 @@
 			children = (
 				E8FA3B501A3F5A0500F5BE5B /* Helpers */,
 				E8FA3B401A3F3A1C00F5BE5B /* Repositories */,
+<<<<<<< HEAD
+				E8E3A65B1A3F30F100CE3678 /* Entities */,
+=======
 				E8E3A65C1A3F30F100CE3678 /* Model */,
+>>>>>>> 37b18649f55829f9c39963b68409156b363964de
 			);
 			path = DataAccess;
 			sourceTree = "<group>";

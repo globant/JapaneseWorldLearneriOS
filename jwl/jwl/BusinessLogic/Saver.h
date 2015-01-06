@@ -10,11 +10,14 @@
 #import "Book.h"
 #import "Unit.h"
 #import "Word.h"
+#import "User.h"
 
 @interface Saver : NSObject
 
 -(BOOL)saveBook:(Book*)book;
 -(BOOL)saveUnit:(Unit*)unit;
 -(BOOL)saveWord:(Word*)word;
+-(BOOL)saveUser:(User*)user;
+-(BOOL)updateUser:(User*)user;
 
 @end
