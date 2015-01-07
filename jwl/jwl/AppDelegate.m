@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "MainViewController.h"
+#import "InitialGenerator.h"
 
 @interface AppDelegate ()
 
@@ -21,6 +22,13 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    if(![[NSUserDefaults standardUserDefaults] boolForKey:@"savedData"])
+    {
+        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"savedData"];
+        [InitialGenerator saveData];
+    }
+    
 	self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 	UIViewController *home = [[MainViewController alloc]init];
 	UINavigationController* navControllerHome = [[UINavigationController alloc] initWithRootViewController:home];

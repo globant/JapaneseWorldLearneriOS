@@ -18,7 +18,6 @@
 @property(nonatomic,strong) NSDictionary* selection;
 @property(nonatomic,strong) NSMutableArray* unitsArray;
 @property(nonatomic,strong) Book* book;
-@property(nonatomic,strong) Book* book2;
 
 @end
 
@@ -43,23 +42,34 @@
     
     self.unitsTable.delegate = self;
     self.unitsTable.dataSource = self;
+
+    NSMutableDictionary* books = [InitialGenerator loadData];
     
-    [InitialGenerator saveData];
-   
-    NSString *path = [InitialGenerator pathForDataFile];
-    NSMutableDictionary* books = [NSMutableDictionary new];
-    books = [NSKeyedUnarchiver unarchiveObjectWithFile:path];
+    int bookSelection = [[self.selection objectForKey:@"book"] intValue];
     
-    self.book = [books objectForKey:@"book"];
+    switch (bookSelection) {
+        case 0:
+            self.book = [books objectForKey:@"book"];
+            break;
+        case 1:
+            self.book = [books objectForKey:@"book2"];
+            break;
+        case 2:
+            self.book = [books objectForKey:@"book3"];
+            break;
+        case 3:
+            self.book = [books objectForKey:@"book4"];
+            break;
+    }
     
-    self.book2 = [books objectForKey:@"book2"];
-    
-    self.unitsArray = self.book.units;
-    
-    /*
     int firstUnit = [[self.selection objectForKey:@"firstUnit"] intValue];
     int secondUnit = [[self.selection objectForKey:@"secondUnit"] intValue];
-    */
+    
+    self.unitsArray = [NSMutableArray new];
+    
+    for (int i = firstUnit; i <= secondUnit; i++) {
+        [self.unitsArray addObject:[self.book.units objectAtIndex:i]];
+    }
     
     [self.unitsTable reloadData];
 }
@@ -110,11 +120,11 @@
     
     Unit* unit = [self.unitsArray objectAtIndex:indexPath.section];
     Word* word = [unit.words objectAtIndex:indexPath.row];
-
+    
     [cell setDelegate:self];
     
     [cell loadLearnCell: word];
-/*
+    /*
     //draw line
     [cell addColumn:50];
     [cell addColumn:120];

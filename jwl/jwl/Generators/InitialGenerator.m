@@ -53,12 +53,37 @@
     [words addObject:word2];
     
     Unit* unit = [[Unit alloc] init];
-    
+    [unit setIdentifier:0];
     [unit setName:@"Unidad 1"];
     [unit setWords:words];
     
+    Word* word3 = [[Word alloc]init];
+    [word3 setIdentifier:[NSNumber numberWithInt:2]];
+    [word3 setJapanese:@"せんぱい"];
+    [word3 setTranslation:@"senpai"];
+    
+    Word* word4 = [[Word alloc]init];
+    [word4 setIdentifier:[NSNumber numberWithInt:3]];
+    [word4 setJapanese:@"へんたい"];
+    [word4 setTranslation:@"hentai"];
+    
+    Word* word5 = [[Word alloc]init];
+    [word5 setIdentifier:[NSNumber numberWithInt:3]];
+    [word5 setJapanese:@"猫"];
+    [word5 setTranslation:@"gato"];
+    
+    NSMutableArray* words2 = [NSMutableArray new];
+    [words2 addObject:word3];
+    [words2 addObject:word4];
+    [words2 addObject:word5];
+    Unit* unit2 = [[Unit alloc] init];
+    [unit2 setIdentifier:[NSNumber numberWithInt:1]];
+    [unit2 setName:@"Unidad 2"];
+    [unit2 setWords:words2];
+    
     NSMutableArray* units = [NSMutableArray new];
     [units addObject:unit];
+    [units addObject:unit2];
     
     Book* book = [[Book alloc]init];
     [book setIdentifier:[NSNumber numberWithInt:0]];
@@ -66,7 +91,7 @@
     [book setUnits:units];
     
     Book* book2 = [[Book alloc]init];
-    [book2 setIdentifier:[NSNumber numberWithInt:0]];
+    [book2 setIdentifier:[NSNumber numberWithInt:1]];
     [book2 setName:@"Libro 2"];
     
     NSString *path = [InitialGenerator pathForDataFile];
