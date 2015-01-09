@@ -12,4 +12,6 @@
 
 @property (strong,nonatomic) NSNumber* identifier;
 
+-(NSMutableArray*)orderById:(NSArray*)array;
+
 @end

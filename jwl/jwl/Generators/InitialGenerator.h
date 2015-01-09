@@ -11,8 +11,10 @@
 
 @interface InitialGenerator : Singleton
 
-//-(void)initialBookGenerator;
 +(void)saveData;
 +(NSMutableDictionary*)loadData;
 +(NSString *) pathForDataFile;
++(NSArray*) getWordsRangeForUnit:(NSString*)unitId;
++(NSArray*) getUnitsRangeForBook:(NSString*)bookId;
+
 @end

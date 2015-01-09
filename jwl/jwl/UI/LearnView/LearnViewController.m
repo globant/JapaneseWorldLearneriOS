@@ -49,21 +49,24 @@
     
     switch (bookSelection) {
         case 0:
-            self.book = [books objectForKey:@"book"];
+            self.book = [books objectForKey:@"Book 1"];
             break;
         case 1:
-            self.book = [books objectForKey:@"book2"];
+            self.book = [books objectForKey:@"Book 2"];
             break;
         case 2:
-            self.book = [books objectForKey:@"book3"];
+            self.book = [books objectForKey:@"Book 3"];
             break;
-        case 3:
-            self.book = [books objectForKey:@"book4"];
+        default:
+            self.book = [books objectForKey:@"Book 4"];
             break;
     }
     
     int firstUnit = [[self.selection objectForKey:@"firstUnit"] intValue];
     int secondUnit = [[self.selection objectForKey:@"secondUnit"] intValue];
+    
+    //TODO: resolve warning
+    self.book.units = [self.book orderById:self.book.units];
     
     self.unitsArray = [NSMutableArray new];
     

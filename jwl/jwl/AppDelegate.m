@@ -25,8 +25,8 @@
     
     if(![[NSUserDefaults standardUserDefaults] boolForKey:@"savedData"])
     {
-        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"savedData"];
         [InitialGenerator saveData];
+        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"savedData"];
     }
     
 	self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];

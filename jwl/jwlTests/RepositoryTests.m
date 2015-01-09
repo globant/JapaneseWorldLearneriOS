@@ -22,7 +22,7 @@
 + (void)setUp {
     [super setUp];
 	InitialGenerator* generator = [[InitialGenerator alloc]init];
-	[generator initialBookGenerator];
+	//[generator initialBookGenerator];
 }
 
 - (void)tearDown {

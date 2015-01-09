@@ -49,7 +49,20 @@
                                @"あお", @"blue",
                                nil];
     
-    NSMutableArray* words = [NSMutableArray new];
+    NSDictionary* allUnits= [[NSDictionary alloc] initWithObjectsAndKeys:
+                                 @"Unit 1", @"0",
+                                 @"Unit 2", @"1",
+                                 @"Unit 3", @"2",
+                                 nil];
+    
+    NSDictionary* allBooks= [[NSDictionary alloc] initWithObjectsAndKeys:
+                             @"Book 1", @"0",
+                             @"Book 2", @"1",
+                             @"Book 3", @"2",
+                             nil];
+    
+    NSMutableArray* allWords = [NSMutableArray new];
+    
     int i = 0;
     for (NSString* key in allKanjis) {
         Word* word = [[Word alloc]init];
@@ -57,33 +70,58 @@
         [word setKanji: [allKanjis objectForKey: key ]];
         [word setTranslation: key ];
         [word setHiragana: [allHiraganas objectForKey:key]];
-        [words addObject:word];
+        [allWords addObject:word];
         i++;
     }
     
-    Unit* unit = [[Unit alloc] init];
-    [unit setIdentifier:0];
-    [unit setName:@"Unidad 1"];
-    [unit setWords:words];
-    
     NSMutableArray* units = [NSMutableArray new];
-    [units addObject:unit];
     
-    Book* book = [[Book alloc]init];
-    [book setIdentifier:[NSNumber numberWithInt:0]];
-    [book setName:@"Libro 1"];
-    [book setUnits:units];
-    
-    Book* book2 = [[Book alloc]init];
-    [book2 setIdentifier:[NSNumber numberWithInt:1]];
-    [book2 setName:@"Libro 2"];
+    for (NSString* key in allUnits) {
+        
+        //string key to NSNumber
+        NSNumberFormatter * f = [[NSNumberFormatter alloc] init];
+        [f setNumberStyle:NSNumberFormatterDecimalStyle];
+        NSNumber * unitId = [f numberFromString:key];
+        
+        Unit* unit = [[Unit alloc] init];
+        [unit setIdentifier: unitId ];
+        [unit setName:[allUnits objectForKey: key ]];
+        
+        //words rage for this unit
+        NSArray* range = [NSArray new];
+        range = [self getWordsRangeForUnit:key];
+        NSMutableArray* words = [NSMutableArray new];
+        for (i = 0; i <= [range[1] intValue]; i++) {
+            [words addObject:allWords[i]];
+        }
+        [unit setWords:words];
+        [units addObject:unit];
+    }
     
     NSString *path = [InitialGenerator pathForDataFile];
-    
     NSMutableDictionary *rootObject = [NSMutableDictionary new];
     
-    [rootObject setObject:book forKey:@"book"];
-    [rootObject setObject:book2 forKey:@"book2"];
+    for (NSString* key in allBooks) {
+        
+        //string key to NSNumber
+        NSNumberFormatter * f = [[NSNumberFormatter alloc] init];
+        [f setNumberStyle:NSNumberFormatterDecimalStyle];
+        NSNumber * bookId = [f numberFromString:key];
+        
+        Book* book = [[Book alloc] init];
+        [book setIdentifier: bookId ];
+        [book setName:[allBooks objectForKey: key ]];
+        
+        //units rage for this book
+        NSArray* range = [NSArray new];
+        range = [self getUnitsRangeForBook: key];
+        NSMutableArray* bookUnits = [NSMutableArray new];
+        for (i = 0; i <= [range[1] intValue]; i++) {
+            [bookUnits addObject:units[i]];
+        }
+        [book setUnits:bookUnits];
+        [rootObject setObject:book forKey: [book name] ];
+    }
     
     [NSKeyedArchiver archiveRootObject: rootObject toFile: path];
 }
@@ -94,6 +132,43 @@
     rootObject = [NSKeyedUnarchiver unarchiveObjectWithFile:path];
     
     return rootObject;
+}
+
++(NSArray*) getWordsRangeForUnit:(NSString*)unitId{
+    NSNumberFormatter * f = [[NSNumberFormatter alloc] init];
+    [f setNumberStyle:NSNumberFormatterDecimalStyle];
+    NSNumber* unitNumber = [f numberFromString:unitId];
+    int unit = [unitNumber intValue];
+    
+    switch (unit) {
+        case 0:
+            return @[@0, @1];
+            break;
+        case 1:
+            return @[@0, @1];
+            break;
+            
+        default:
+            return @[@0, @1];
+            break;
+    }
+}
+
++(NSArray*) getUnitsRangeForBook:(NSString*)bookId{
+    NSNumberFormatter * f = [[NSNumberFormatter alloc] init];
+    [f setNumberStyle:NSNumberFormatterDecimalStyle];
+    NSNumber* bookNumber = [f numberFromString:bookId];
+    int book = [bookNumber intValue];
+    
+    switch (book) {
+        case 0:
+            return @[@0, @2];
+            break;
+            
+        default:
+            return @[@0, @2];
+            break;
+    }
 }
 
 @end

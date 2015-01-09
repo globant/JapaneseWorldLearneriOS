@@ -29,6 +29,7 @@ NSString* const wordClass = @"Word";
 }
 
 +(BOOL)removeWord:(Word *)word {
+ /*
 	NSManagedObjectContext *context = [[CoreDataHelper sharedInstance] managedObjectContext];
 	[context deleteObject:word];
 	NSError* error = nil;
@@ -37,7 +38,9 @@ NSString* const wordClass = @"Word";
 		[context rollback];
 		return FALSE;
 	}
+ */
 	return TRUE;
+
 }
 
 

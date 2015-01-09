@@ -28,4 +28,13 @@
     [coder encodeObject:self.identifier forKey:@"identifier"];
 }
 
+-(NSMutableArray*)orderById:(NSArray*)array{
+    NSSortDescriptor *sortDescriptor;
+    sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"identifier"
+                                                 ascending:YES];
+    NSArray *sortDescriptors = [NSArray arrayWithObject:sortDescriptor];
+    return (NSMutableArray*)[array sortedArrayUsingDescriptors:sortDescriptors];
+}
+
+
 @end
