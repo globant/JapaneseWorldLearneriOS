@@ -10,8 +10,9 @@
 
 @interface Word : BaseEntity
 
-@property (strong,nonatomic) NSString* japanese;
+@property (strong,nonatomic) NSString* kanji;
 @property (strong,nonatomic) NSString* translation;
+@property (strong,nonatomic) NSString* hiragana;
 
 -(id)initWithCoder:(NSCoder*)aDecoder;
 -(void)encodeWithCoder: (NSCoder *)coder;

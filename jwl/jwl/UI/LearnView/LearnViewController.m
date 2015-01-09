@@ -124,11 +124,7 @@
     [cell setDelegate:self];
     
     [cell loadLearnCell: word];
-    /*
-    //draw line
-    [cell addColumn:50];
-    [cell addColumn:120];
-    */
+    
     return cell;
 }
 

@@ -13,9 +13,7 @@
 
 
 @property (weak, nonatomic) id delegate;
-@property (weak, nonatomic) NSMutableArray *columns;
 
 -(void)loadLearnCell:(Word*)word;
--(void)addColumn:(CGFloat)position;
 
 @end

@@ -16,7 +16,7 @@ NSString* const wordClass = @"Word";
 +(BOOL)saveWord:(Word *)word {
 	NSManagedObjectContext *context = [[CoreDataHelper sharedInstance] managedObjectContext];
 	Word* object = [NSEntityDescription insertNewObjectForEntityForName:wordClass inManagedObjectContext:context];
-	[object setJapanese:[word japanese]];
+	[object setKanji:[word kanji]];
 	[object setTranslation:[word translation]];
 	[object setIdentifier:[word identifier]];
 	NSError* localError = nil;
